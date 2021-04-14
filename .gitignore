@@ -21,3 +21,8 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+
+# + from GitHub file (.gitignore)
+.env.backup
+docker-compose.override.yml
