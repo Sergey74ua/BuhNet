@@ -14,3 +14,6 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');
+
+// Favicon
+mix.copy('resources/favicon.ico', 'public/favicon.ico');
