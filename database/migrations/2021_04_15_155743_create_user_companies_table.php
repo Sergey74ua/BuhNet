@@ -13,7 +13,7 @@ class CreateUserCompaniesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_company', function (Blueprint $table) {
+        Schema::create('user_companies', function (Blueprint $table) {
             $table->bigInteger('id_user', 20)->index();
             $table->bigInteger('id_company', 20)->index();
             $table->date('validity')->nullable();
@@ -30,6 +30,6 @@ class CreateUserCompaniesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_company');
+        Schema::dropIfExists('user_companies');
     }
 }
