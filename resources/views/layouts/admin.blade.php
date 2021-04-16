@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -20,31 +20,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div>
 
-        @include('inc.header')
-
-        <main class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-
-                    @include('inc.sidebar-left')
-
-                </div>
-                <div class="col-md-8">
-
-                    @yield('content')
-
-                </div>
-                <div class="col-md-2">
-
-                    @include('inc.sidebar-right')
-
-                </div>
-            </div>
-        </main>
-
-        @include('inc.footer')
+         @yield('content')
 
     </div>
 </body>
