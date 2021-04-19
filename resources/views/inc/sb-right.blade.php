@@ -1,4 +1,4 @@
-@section('sidebar_right')
+@section('sb-right')
 
 <aside>
     sidebar_right
