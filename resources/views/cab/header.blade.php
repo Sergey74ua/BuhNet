@@ -19,7 +19,7 @@
         </ul>
     </div>
     <!-- Theme color switcher -->
-    <div class="btn-group btn-group-toggle ml-auto shadow" data-toggle="buttons">
+    <div class="btn-group btn-group-sm btn-group-toggle ml-auto shadow" data-toggle="buttons" aria-label="Цветовая тема">
         <label class="btn btn-secondary">
             <input type="radio" name="options" id="option_light" autocomplete="off">свет
         </label>
