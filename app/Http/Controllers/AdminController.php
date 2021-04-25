@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+use App\Models\companies;
+
 class AdminController extends Controller
 {
     // Admin (access)
@@ -16,7 +19,22 @@ class AdminController extends Controller
     // Admin (get)
     public function admin_get($page = null)
     {
-        //
+        // Корневая страница (по умолчанию)
+        if ($page == null) {
+            return view('adm.panel');
+        }
+
+        // Список пользователей
+        if ($page == 'users') {
+            return view('adm.panel', ['data' => User::all()]);
+        }
+
+        // Список компаний
+        if ($page == 'companies') {
+            return view('adm.panel', ['data' => companies::all()]);
+        }
+ 
+        // По умолчанию
         return view('adm.panel');
     }
 
