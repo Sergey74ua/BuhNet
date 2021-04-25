@@ -1,7 +1,7 @@
 @section('header')
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
@@ -10,10 +10,32 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <a class="navbar-brand" href="/">BuhNet</a>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">Кабинет</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Калькулятор</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Тарифы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog">Партнеры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help">Справочник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page">О сайте</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -38,6 +60,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="profile">Профиль</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-md-2">
 
-                    @include('inc.sidebar-left')
+                    @include('inc.sb-left')
 
                 </div>
                 <div class="col-md-8">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-2">
 
-                    @include('inc.sidebar-right')
+                    @include('inc.sb-right')
 
                 </div>
             </div>

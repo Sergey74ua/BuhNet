@@ -20,10 +20,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div>
 
-         @yield('content')
+    @include('adm.header')
 
-    </div>
+    <main class="container-fluid">
+        <div class="row my-3">
+            <div class="col-md-2">
+
+                @include('adm.sidebar')
+
+            </div>
+            <div class="col-md-10">
+
+                @yield('content')
+
+            </div>
+        </div>
+    </main>
+
+    @include('adm.footer')
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('layouts.cabinet')
+@extends('layouts.cab')
 
 @section('content')
 
@@ -33,7 +33,7 @@
                 <!-- logo -->
                 <div class="col-3">
                     <label for="logo">Эмблема</label>
-                    <img class="img-thumbnail" alt="Логотип компании" src="img/favicon.png" />
+                    <img class="img-thumbnail" alt="Логотип компании" src="img/favicon.png"/>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary" type="button">Загрузить</button>
@@ -79,9 +79,10 @@
                     </div>
                     <select class="custom-select" name="taxation" id="taxation">
                         <option value="1" selected>ОСН</option>
-                        <option value="2">УСНД</option>
-                        <option value="3">УСНП</option>
-                        <option value="4">ЕСХН</option>
+                        <option value="2">НПД</option>
+                        <option value="3">УСНД</option>
+                        <option value="4">УСНП</option>
+                        <option value="5">ЕСХН</option>
                     </select>
                 </div>
                 <!-- IFNS - 4 -->
@@ -225,14 +226,14 @@
                 <!-- photo -->
                 <div class="col-4">
                     <label for="logo">Фото</label>
-                    <img class="img-thumbnail" alt="Фотография компании" src="img/favicon.png" />
+                    <img class="img-thumbnail" alt="Фотография компании" src="img/favicon.png"/>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary" type="button">Загрузить</button>
                         </div>
                         <div class="custom-file">
                             <input class="custom-file-input" type="file" name="photo" accept="image/*" alt="photo" id="photo">
-                            <label class="custom-file-label" for="photo">logotype.png</label>
+                            <label class="custom-file-label" for="photo">logotype.jpg</label>
                         </div>
                     </div>
                 </div>
@@ -247,4 +248,5 @@
         
     </fieldset>
 </form>
+
 @endsection

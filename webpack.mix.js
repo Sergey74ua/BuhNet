@@ -17,3 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 // Favicon
 mix.copy('resources/favicon.ico', 'public/favicon.ico');
+
+// Image
+mix.copyDirectory('resources/img', 'public/img');

@@ -14,7 +14,7 @@
                 <a class="nav-link" href="home">Кабинет</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Калькулятор</a>
+                <a class="nav-link" href="#">Пользователи</a>
             </li>
         </ul>
     </div>

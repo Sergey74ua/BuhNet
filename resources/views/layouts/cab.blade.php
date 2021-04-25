@@ -21,10 +21,27 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div>
-    
-         @yield('content')
 
+    @include('cab.header')
+
+    <div class="container-fluid">
+        <div class="row my-3">
+            <div class="col-1">
+
+                @include('cab.sb-left')
+
+            </div>
+            <div class="col-10">
+
+                @yield('content')
+
+            </div>
+            <div class="col-1">
+
+                @include('cab.sb-right')
+
+            </div>
+        </div>
     </div>
 </body>
 </html>
