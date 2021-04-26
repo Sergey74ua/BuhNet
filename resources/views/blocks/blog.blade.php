@@ -2,6 +2,7 @@
 
 <div>
     <p>БЛОГ НОВОСТЕЙ, ОБЪЯВЛЕНИЙ, ПОЗДРАВЛЕНИЙ И т.д. - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
     <div class="row">
         <div class="col-md-4">
             <h2>Heading</h2>

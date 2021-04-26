@@ -21,7 +21,7 @@ class AdminController extends Controller
     {
         // Корневая страница (по умолчанию)
         if ($page == null) {
-            return view('adm.panel');
+            return view('adm.panel', ['data' => ['Пользователи', 'Компании']]);
         }
 
         // Список пользователей
@@ -33,9 +33,11 @@ class AdminController extends Controller
         if ($page == 'companies') {
             return view('adm.panel', ['data' => companies::all()]);
         }
- 
-        // По умолчанию
-        return view('adm.panel');
+
+        // Список операций
+        if ($page == 'operations') {
+            return view('adm.panel', ['data' => ['добавить вывод списка операций по выбранной компании']]);
+        }
     }
 
     // Admin (post)

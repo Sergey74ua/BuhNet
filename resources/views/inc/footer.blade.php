@@ -1,22 +1,22 @@
 @section('footer')
 
-<footer>
+<footer style="border: 1px solid black;">
     <div class="container">
         <div class="row">
             <div class="col">
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+                <p>Пользовательское соглашение</p>
+                <p>Политика конфиденциальности</p>
+                <p>Счетчики посещений</p>
             </div>
             <div class="col">
-                <p>4</p>
-                <p>5</p>
-                <p>6</p>
+                <p>О сайте</p>
+                <p>Инструкция Кабинета</p>
+                <p>Тарифы услуг</p>
             </div>
             <div class="col">
-                <p>7</p>
-                <p>8</p>
-                <p>9</p>
+                <p>Отправить сообщение</p>
+                <p>Контакты</p>
+                <p>Мы в соц.сетях.</p>
             </div>
         </div>
     </div>

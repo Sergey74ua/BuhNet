@@ -2,6 +2,8 @@
 
 <div>
     <p>ВОПРОСЫ И ОТВЕТЫ - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
+
     <div class="media border p-3">
         <img src="img/favicon.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
         <div class="media-body">
@@ -16,6 +18,7 @@
             </div> 
         </div>
     </div>
+
     <div class="media border p-3">
         <img src="img/favicon.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
         <div class="media-body">
@@ -29,7 +32,8 @@
             </div>
             </div> 
         </div>
-    </div> 
+    </div>
+    
 </div>
 
 @show

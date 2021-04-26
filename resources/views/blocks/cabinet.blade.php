@@ -2,6 +2,8 @@
 
 <div>
     <p>ДЕМОНСТРАЦИЯ КАБИНЕТА - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
+
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#mode-one">mode-one</a>

@@ -2,6 +2,7 @@
 
 <div>
     <p>НАШИ ПАРТНЕРЫ - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
     <div class="row">
         <div class="col-lg-4">
             <img class="rounded-circle" src="img/favicon.png" alt="Generic placeholder image" width="140" height="140">

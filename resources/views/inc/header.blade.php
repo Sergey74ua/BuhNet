@@ -1,80 +1,82 @@
 @section('header')
 
-<header>
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <a class="navbar-brand" href="/">BuhNet</a>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
+<header class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <!-- Hamburger menu -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Project logo -->
+    <a class="navbar-brand" href="/">BuhNet</a>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="cabinet">Кабинет</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calc">Калькулятор</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog">Новости</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tariff">Тарифы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalog">Партнеры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help">Справочник</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about">О сайте</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Theme color switcher -->
+    <div class="btn-group btn-group-sm btn-group-toggle ml-auto shadow" data-toggle="buttons" aria-label="Цветовая тема">
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option_light" autocomplete="off">свет
+        </label>
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option_dark" autocomplete="off" checked>тьма
+        </label>
+    </div>
+    <div>
+        <ul class="navbar-nav">
+            <!-- Authorization -->
+            @guest
+                @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Кабинет</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Логин') }}</a>
                     </li>
+                @endif
+                @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Калькулятор</a>
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Тарифы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalog">Партнеры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help">Справочник</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page">О сайте</a>
-                    </li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                        @endif
-                        
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="profile">Профиль</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile">Профиль</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            {{ __('Выход') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+        </ul>
+    </div>
+    <!-- Profile - mb_substr((Auth::user()->name), 0, 1) - вызывает ошибку при отсутствии авторизации -->
+    <h2><span class="badge badge-secondary shadow">N</span></h2>
 </header>

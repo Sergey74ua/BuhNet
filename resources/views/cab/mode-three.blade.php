@@ -14,9 +14,7 @@
         <tbody class="text-right">
             @foreach($data as $element)
                 <tr>
-                    <th class="bn-num">{{ $element->id }}</th>
-                    <th class="bn-num">{{ $element->operating_date }}</th>
-                    <th class="bn-num">{{ $element->operating_sum }}</th>
+                    <th class="bn-num">{{ $element }}</th>
                 </tr>
             @endforeach
         </tbody>

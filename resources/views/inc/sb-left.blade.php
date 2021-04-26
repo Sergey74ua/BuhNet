@@ -1,5 +1,29 @@
 @section('sb-left')
 
 <aside>
-    sidebar_left
+    <!-- TEST PARENT -->
+    @show
+    
+    <section class="mb-2">
+        <!-- weather widget start -->
+        <div id="m-booked-weather-bl250-29091"> <div class="booked-wzs-250-175 weather-customize" style="background-color:#137AE9;width:288px;" id="width1"> <div class="booked-wzs-250-175_in"> <div class="booked-wzs-250-175-data"> <div class="booked-wzs-250-175-left-img wrz-18"> </div> <div class="booked-wzs-250-175-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>12</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d">H: <span class="plus">+</span>11&deg;</div> <div class="booked-wzs-day-n">L: <span class="plus">+</span>8&deg;</div> </div> </div> <div class="booked-wzs-250-175-info"> <div class="booked-wzs-250-175-city">Саки </div> <div class="booked-wzs-250-175-date">Вторник, 20 Апрель</div> <div class="booked-wzs-left"> <span class="booked-wzs-bottom-l">Прогноз на неделю</span> </div> </div> </div> </div> <table cellpadding="0" cellspacing="0" class="booked-wzs-table-250"> <tr> <td>Пн</td> <td>Ср</td> <td>Чт</td> <td>Пт</td> <td>Сб</td> <td>Вс</td> </tr> <tr> <td class="week-day-ico"><div class="wrz-sml wrzs-03"></div></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> </tr> <tr> <td class="week-day-val"><span class="plus">+</span>14&deg;</td> <td class="week-day-val"><span class="plus">+</span>13&deg;</td> <td class="week-day-val"><span class="plus">+</span>14&deg;</td> <td class="week-day-val"><span class="plus">+</span>16&deg;</td> <td class="week-day-val"><span class="plus">+</span>15&deg;</td> <td class="week-day-val"><span class="plus">+</span>15&deg;</td> </tr> <tr> <td class="week-day-val"><span class="plus">+</span>10&deg;</td> <td class="week-day-val"><span class="plus">+</span>8&deg;</td> <td class="week-day-val"><span class="plus">+</span>8&deg;</td> <td class="week-day-val"><span class="plus">+</span>9&deg;</td> <td class="week-day-val"><span class="plus">+</span>10&deg;</td> <td class="week-day-val"><span class="plus">+</span>8&deg;</td> </tr> </table> </a> </div> </div> </div>
+        <script type="text/javascript"> var css_file=document.createElement("link"); var widgetUrl = location.href; css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData_29091(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-weather-bl250-29091'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } var widgetSrc = "https://widgets.booked.net/weather/info?action=get_weather_info;ver=7;cityID=w560386;type=3;scode=124;ltid=3539;domid=589;anc_id=58445;countday=undefined;cmetric=1;wlangID=20;color=137AE9;wwidth=288;header_color=ffffff;text_color=333333;link_color=08488D;border_form=1;footer_color=ffffff;footer_text_color=333333;transparent=0;v=0.0.1";widgetSrc += ';ref=' + widgetUrl;widgetSrc += ';rand_id=29091';widgetSrc += ';wstrackId=89070311';var weatherBookedScript = document.createElement("script"); weatherBookedScript.setAttribute("type", "text/javascript"); weatherBookedScript.src = widgetSrc; document.body.appendChild(weatherBookedScript) </script>
+        <!-- weather widget end -->
+    </section>
+
+    <section class="mb-2">
+        <!--Currency Converter widget by FreeCurrencyRates.com -->
+        <div id='gcw_mainF5uV1tESO' class='gcw_mainF5uV1tESO'></div>
+        <script>function reloadF5uV1tESO(){ var sc = document.getElementById('scF5uV1tESO');if (sc) sc.parentNode.removeChild(sc);sc = document.createElement('script');sc.type = 'text/javascript';sc.charset = 'UTF-8';sc.async = true;sc.id='scF5uV1tESO';sc.src = 'https://freecurrencyrates.com/ru/widget-vertical-editable?iso=USD-XUL-EUR-GBP-JPY-CNY&df=1&p=F5uV1tESO&v=fits&source=fcr&width=300&width_title=0&firstrowvalue=1&thm=C8C8C8,7F99B2,C8C8C8,330099,FFFFFF,C8C8C8,3333CC,FFFFFF,FFFFFF&title=%D0%9A%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82%D0%B5%D1%80%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82&tzo=-180';var div = document.getElementById('gcw_mainF5uV1tESO');div.parentNode.insertBefore(sc, div);} reloadF5uV1tESO(); </script>
+        <!-- put custom styles here: .gcw_mainF5uV1tESO{}, .gcw_headerF5uV1tESO{}, .gcw_ratesF5uV1tESO{}, .gcw_sourceF5uV1tESO{} -->
+        <!--End of Currency Converter widget by FreeCurrencyRates.com -->
+    </section>
+
+    <section class="mb-2">
+        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+    </section>
+
+    <section class="mb-2">
+        <iframe frameborder="0" scrolling="no" width="288" height="170" style="border:0px solid #000000" src="https://pogodnik.com/informer/horizontal/09/1005-pogoda-v-sakah-krym-avtonomnaya-respublika-ukraina"> <a href="https://pogodnik.com/1005-pogoda-v-sakah-krym-avtonomnaya-respublika-ukraina"> <img alt="prognoz pogody" src="https://pogodnik.com/images/prognoz-pogody-200x240.png"> </a> </iframe>
+    </section>
 </aside>

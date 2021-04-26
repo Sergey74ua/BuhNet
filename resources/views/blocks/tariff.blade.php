@@ -2,6 +2,7 @@
 
 <div>
     <p>ТАРИФЫ - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
     <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
             <div class="card-header">

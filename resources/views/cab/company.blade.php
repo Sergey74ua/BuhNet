@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{ route('forms') }}" method="post">
+<form action="{{ route('company_post') }}" method="post">
     @csrf
     <fieldset class="card border-primary">
 
@@ -32,7 +32,7 @@
                 </div>
                 <!-- logo -->
                 <div class="col-3">
-                    <label for="logo">Эмблема</label>
+                    <label for="logo">Логотип</label>
                     <img class="img-thumbnail" alt="Логотип компании" src="img/favicon.png"/>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -51,22 +51,22 @@
                 <!-- INN - 12 (index) -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ИНН:</span></div>
-                    <input class="form-control" type="text" name="INN" maxlength="12" pattern="[0-9]{10, 12}" placeholder="123 456 789 000" required>
+                    <input class="form-control" type="text" name="inn" maxlength="12" pattern="[0-9]{10, 12}" placeholder="123 456 789 000" required>
                 </div>
                 <!-- KPP - 9 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">КПП:</span></div>
-                    <input class="form-control" type="text" name="KPP" maxlength="9" pattern="[0-9]{9}" placeholder="12 34 56 789">
+                    <input class="form-control" type="text" name="kpp" maxlength="9" pattern="[0-9]{9}" placeholder="12 34 56 789">
                 </div>
                 <!-- OGRN - 15 -->
                 <div class="input-group col-4">
                     <div class="input-group-prepend"><span class="input-group-text">ОГРН:</span></div>
-                    <input class="form-control" type="text" name="OGRN" maxlength="15" pattern="[0-9]{13, 15}" placeholder="1 23 45 1234567 89 0">
+                    <input class="form-control" type="text" name="ogrn" maxlength="15" pattern="[0-9]{13, 15}" placeholder="1 23 45 1234567 89 0">
                 </div>
                 <!-- OKFS - 2 -->
                 <div class="input-group col-2">
                     <div class="input-group-prepend"><span class="input-group-text">ОКФС:</span></div>
-                    <input class="form-control" type="text" name="OKFS" maxlength="2" pattern="[0-9]{2}" placeholder="12">
+                    <input class="form-control" type="text" name="okfs" maxlength="2" pattern="[0-9]{2}" placeholder="12">
                 </div>
             </div>
 
@@ -88,12 +88,12 @@
                 <!-- IFNS - 4 -->
                 <div class="input-group col-2">
                     <div class="input-group-prepend"><span class="input-group-text">ИФНС:</span></div>
-                    <input class="form-control" type="text" name="IFNS" maxlength="4" pattern="[0-9]{4}" placeholder="12 34">
+                    <input class="form-control" type="text" name="ifns" maxlength="4" pattern="[0-9]{4}" placeholder="12 34">
                 </div>
                 <!-- OKVED - 6 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКВЕД:</span></div>
-                    <input class="form-control" type="text" name="OKVED" maxlength="6" pattern="[0-9]{6}" placeholder="12 34 56">
+                    <input class="form-control" type="text" name="okved" maxlength="6" pattern="[0-9]{6}" placeholder="12 34 56">
                 </div>
                 <!-- email -->
                 <div class="input-group col-5">
@@ -126,7 +126,7 @@
                 <!-- bank - 9 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">БИК:</span></div>
-                    <input class="form-control" type="text" name="BIK" maxlength="9" pattern="[0-9]{9}" placeholder="123 456 789">
+                    <input class="form-control" type="text" name="bik" maxlength="9" pattern="[0-9]{9}" placeholder="123 456 789">
                 </div>
                 <!-- *bank name* -->
                 <div class="input-group col-4">
@@ -145,17 +145,17 @@
                 <!-- OKOGU - 7 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКОГУ:</span></div>
-                    <input class="form-control" type="text" name="OKOGU" maxlength="9" pattern="[0-9]{7}" placeholder="123 4567">
+                    <input class="form-control" type="text" name="okogu" maxlength="9" pattern="[0-9]{7}" placeholder="123 4567">
                 </div>
                 <!-- OKTMO - 11 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКТМО:</span></div>
-                    <input class="form-control" type="text" name="OKTMO" maxlength="11" pattern="[0-9]{11}" placeholder="00 123 456 789">
+                    <input class="form-control" type="text" name="oktmo" maxlength="11" pattern="[0-9]{11}" placeholder="00 123 456 789">
                 </div>
                 <!-- OKATO - 11 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКАТО:</span></div>
-                    <input class="form-control" type="text" name="OKATO" maxlength="11" pattern="[0-9]{11}" placeholder="00 123 456 789">
+                    <input class="form-control" type="text" name="okato" maxlength="11" pattern="[0-9]{11}" placeholder="00 123 456 789">
                 </div>
             </div>
 
@@ -164,22 +164,22 @@
                 <!-- OKPO - 10 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКПО:</span></div>
-                    <input class="form-control" type="text" name="OKPO" maxlength="10" pattern="[0-9]{10}" placeholder="123 456 7890">
+                    <input class="form-control" type="text" name="okpo" maxlength="10" pattern="[0-9]{10}" placeholder="123 456 7890">
                 </div>
                 <!-- OKOPF - 5 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКОПФ:</span></div>
-                    <input class="form-control" type="text" name="OKOPF" maxlength="5" pattern="[0-9]{5}" placeholder="1 23 45">
+                    <input class="form-control" type="text" name="okopf" maxlength="5" pattern="[0-9]{5}" placeholder="1 23 45">
                 </div>
                 <!-- PFR - 12 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ПФР:</span></div>
-                    <input class="form-control" type="text" name="PFR" maxlength="12" pattern="[0-9]{12}" placeholder="123 456 789 000">
+                    <input class="form-control" type="text" name="pfr" maxlength="12" pattern="[0-9]{12}" placeholder="123 456 789 000">
                 </div>
                 <!-- FSS - 10 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ФСС:</span></div>
-                    <input class="form-control" type="text" name="FSS" maxlength="10" pattern="[0-9]{10}" placeholder="123 456 7890">
+                    <input class="form-control" type="text" name="fss" maxlength="10" pattern="[0-9]{10}" placeholder="123 456 7890">
                 </div>
             </div>
 
@@ -247,6 +247,24 @@
         </div>
         
     </fieldset>
+
+    <!-- Outputting input errors -->
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <!-- Outputting input results -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 </form>
 
 @endsection

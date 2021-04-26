@@ -2,6 +2,8 @@
 
 <div>
     <p>ОТЗЫВЫ ПАРТНЕРОВ - БЛОК ГЛАВНОЙ СТРАНИЦЫ</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta consequatur assumenda laborum sapiente eum quaerat corporis non fugit eius.
+
     <!-- Media top -->
     <div class="media">
     <img src="img/favicon.png" class="align-self-start mr-3" style="width:60px">
