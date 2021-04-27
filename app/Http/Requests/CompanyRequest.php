@@ -13,7 +13,7 @@ class CompanyRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true;  // false - если нужен доступ только при авторизации (почему-то не работает)
     }
 
     /**
@@ -26,37 +26,38 @@ class CompanyRequest extends FormRequest
         return [
             'inn'               =>  'required|min:10|max:12',
             'name'              =>  'min:3|max:255',
-            'status'            =>  'max:7',
-            'taxation'          =>  '', //'min:3|max:4'
-            'kpp'               =>  'digits:9',
-            'ogrn'              =>  'min:13|max:15',
-            'okfs'              =>  'digits:2',
-            'okved'             =>  'min:1|max:6',
-            'ifns'              =>  'digits:4',
-            'okpo'              =>  'min:8|max:10',
-            'okopf'             =>  'digits:5',
-            'okogu'             =>  'digits:7',
-            'oktmo'             =>  'digits:11',
-            'okato'             =>  'digits:11',
-            'pfr'               =>  'digits:12',
-            'fss'               =>  'digits:10',
-            'bik'               =>  'digits:9',
-            'account'           =>  'digits:20',
-            'phone'             =>  'min:4|max:15',
-            'opening'           =>  'date',
-            'table_units'       =>  'required|min:1|max:255', //СКРИПТ
-            'table_operation'   =>  'required|min:1|max:255', //СКРИПТ
-            'fullname'          =>  'min:3|max:255',
-            'email'             =>  'email',
-            'director'          =>  'max:255',
-            'rank'              =>  'max:255',
-            'certificate'       =>  'max:255',
-            'address'           =>  'max:255',
-            'founder'           =>  'max:255',
-            'registrar'         =>  'max:255',
-            'logo'              =>  'image',
-            'photo'             =>  'image',
-            'description'       =>  'max:255'
+            'taxation'          =>  'nullable|min:3|max:4',
+            'kpp'               =>  'nullable|digits:9',
+            'ogrn'              =>  'nullable|min:13|max:15',
+            'okfs'              =>  'nullable|digits:2',
+            'okved'             =>  'nullable|min:1|max:6',
+            'ifns'              =>  'nullable|digits:4',
+            'okpo'              =>  'nullable|min:8|max:10',
+            'okopf'             =>  'nullable|digits:5',
+            'okogu'             =>  'nullable|digits:7',
+            'oktmo'             =>  'nullable|digits:11',
+            'okato'             =>  'nullable|digits:11',
+            'pfr'               =>  'nullable|digits:12',
+            'fss'               =>  'nullable|digits:10',
+            'bik'               =>  'nullable|digits:9',
+            'account'           =>  'nullable|digits:20',
+            'phone'             =>  'nullable|min:4|max:15',
+            'opening'           =>  'nullable|date',
+            'fullname'          =>  'nullable|min:3|max:255',
+            'email'             =>  'nullable|email',
+            'director'          =>  'nullable|max:255',
+            'rank'              =>  'nullable|max:255',
+            'certificate'       =>  'nullable|max:255',
+            'address'           =>  'nullable|max:255',
+            'founder'           =>  'nullable|max:255',
+            'registrar'         =>  'nullable|max:255',
+            'logo'              =>  'nullable|image',
+            'photo'             =>  'nullable|image',
+            'description'       =>  'nullable|max:255'
+
+            //'status'            =>  'max:7',
+            //'table_units'       =>  'required|min:1|max:255',
+            //'table_operation'   =>  'required|min:1|max:255',
         ];
     }
 
