@@ -14,10 +14,11 @@ class CreateUserCompaniesTable extends Migration
     public function up()
     {
         Schema::create('user_companies', function (Blueprint $table) {
-            $table->bigInteger('id_user', 20)->index();
-            $table->bigInteger('id_company', 20)->index();
+            $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('company_id')->constrained('companies');
             $table->date('validity')->nullable();
-            $table->bigInteger('director', 20)->nullable();
+            $table->string('director')->nullable();
             $table->string('specialty')->nullable();
             $table->timestamps();
         });
