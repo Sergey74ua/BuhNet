@@ -31,52 +31,56 @@ class HomeController extends Controller
     // Company 
     public function company_get()
     {
+        /* return view('cab.home', ['company' => companies::all()]); */
         return view('cab.company');
     }
 
     // New company 
     public function company_post(CompanyRequest $data)
     {
-        /*$company = new companies();
+        $company = new companies();
 
-        $company->INN()             = $data->input('INN');
-        $company->name()            = $data->input('name');
-        $company->status()          = $data->input('status');
-        $company->taxation()        = $data->input('taxation');
-        $company->KPP()             = $data->input('KPP');
-        $company->OGRN()            = $data->input('OGRN');
-        $company->OKFS()            = $data->input('OKFS');
-        $company->OKVED()           = $data->input('OKVED');
-        $company->IFNS()            = $data->input('IFNS');
-        $company->OKPO()            = $data->input('OKPO');
-        $company->OKOPF()           = $data->input('OKOPF');
-        $company->OKOGU()           = $data->input('OKOGU');
-        $company->OKTMO()           = $data->input('OKTMO');
-        $company->OKATO()           = $data->input('OKATO');
-        $company->PFR()             = $data->input('PFR');
-        $company->FSS()             = $data->input('FSS');
-        $company->bank()            = $data->input('bank');
-        $company->account()         = $data->input('account');
-        $company->phone()           = $data->input('phone');
-        $company->opening()         = $data->input('opening');
-        $company->table_units()     = $data->input('table_units');
-        $company->table_operation() = $data->input('table_operation');
-        $company->fullname()        = $data->input('fullname');
-        $company->email()           = $data->input('email');
-        $company->director()        = $data->input('director');
-        $company->rank()            = $data->input('rank');
-        $company->certificate()     = $data->input('certificate');
-        $company->address()         = $data->input('address');
-        $company->founder()         = $data->input('founder');
-        $company->registrar()       = $data->input('registrar');
-        $company->logo()            = $data->input('logo');
-        $company->photo()           = $data->input('photo');
-        $company->description()     = $data->input('description');
+        $company->inn             = $data->input('inn');
+        $company->name            = $data->input('name');
+        $company->status          = $data->input('status');
+        $company->taxation        = $data->input('taxation');
+        $company->kpp             = $data->input('kpp');
+        $company->ogrn            = $data->input('ogrn');
+        $company->okfs            = $data->input('okfs');
+        $company->okved           = $data->input('okved');
+        $company->ifns            = $data->input('ifns');
+        $company->okpo            = $data->input('okpo');
+        $company->okopf           = $data->input('okopf');
+        $company->okogu           = $data->input('okogu');
+        $company->oktmo           = $data->input('oktmo');
+        $company->okato           = $data->input('okato');
+        $company->pfr             = $data->input('pfr');
+        $company->fss             = $data->input('fss');
+        $company->bik             = $data->input('bik');
+        $company->account         = $data->input('account');
+        $company->phone           = $data->input('phone');
+        $company->opening         = $data->input('opening');
+        $company->table_units     = $data->input('table_units');
+        $company->table_operation = $data->input('table_operation');
+        $company->fullname        = $data->input('fullname');
+        $company->email           = $data->input('email');
+        $company->director        = $data->input('director');
+        $company->rank            = $data->input('rank');
+        $company->certificate     = $data->input('certificate');
+        $company->address         = $data->input('address');
+        $company->founder         = $data->input('founder');
+        $company->registrar       = $data->input('registrar');
+        $company->logo            = $data->input('logo');
+        $company->photo           = $data->input('photo');
+        $company->description     = $data->input('description');
 
-        $company->save();*/
+        $company->status          = 'New';
+        $company->table_units     = 'admin';
+        $company->table_operation = 'admin';
 
-        //return view('cab.company');
-        return $data;
+        $company->save();
+
+        return redirect()->route('company');
     }
 
     // Operation 
