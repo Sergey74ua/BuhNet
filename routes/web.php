@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Guest
 Route::any('/', [App\Http\Controllers\GuestController::class, 'index']);
+Route::get('index', [App\Http\Controllers\GuestController::class, 'index']);
 Route::get('about', [App\Http\Controllers\GuestController::class, 'page'])->name('about');
 Route::get('calc', [App\Http\Controllers\GuestController::class, 'calc'])->name('calc');
 Route::get('tariff', [App\Http\Controllers\GuestController::class, 'page'])->name('tariff');
@@ -19,7 +20,7 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'user_get'])-
 Route::post('profile', [App\Http\Controllers\UserController::class, 'user_post'])->name('user_post');
 
 // Cabinet
-Route::get('cabinet', [App\Http\Controllers\HomeController::class, 'cabinet']);
+Route::get('cabinet', [App\Http\Controllers\HomeController::class, 'cabinet'])->name('user_post');
 
 Route::get('company', [App\Http\Controllers\HomeController::class, 'company_get'])->name('company');
 Route::post('company', [App\Http\Controllers\HomeController::class, 'company_post'])->name('company_post');
