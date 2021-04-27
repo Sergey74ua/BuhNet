@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home">Кабинет</a>
+                <a class="nav-link" href="cabinet">Кабинет</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Пользователи</a>

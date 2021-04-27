@@ -20,7 +20,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Наименование предприятия</span>
                         </div>
-                        <input class="form-control" type="text" name="company" placeholder="ПАО «НК «Роснефть»" autofocus>
+                        <input class="form-control" type="text" name="name" placeholder="ПАО «НК «Роснефть»" autofocus>
                     </div>
                     <!-- fullname -->
                     <div class="input-group mb-3">
@@ -78,11 +78,12 @@
                         <label class="input-group-text" for="taxation">Налоги:</label>
                     </div>
                     <select class="custom-select" name="taxation" id="taxation">
-                        <option value="1" selected>ОСН</option>
-                        <option value="2">НПД</option>
-                        <option value="3">УСНД</option>
-                        <option value="4">УСНП</option>
-                        <option value="5">ЕСХН</option>
+                        <option value="ОСН" selected>ОСН</option>
+                        <option value="НПД">НПД</option>
+                        <option value="УСНД">УСНД</option>
+                        <option value="УСНП">УСНП</option>
+                        <option value="ЕСХН">ЕСХН</option>
+                        <option value="иное">иное</option>
                     </select>
                 </div>
                 <!-- IFNS - 4 -->
@@ -128,7 +129,7 @@
                     <div class="input-group-prepend"><span class="input-group-text">БИК:</span></div>
                     <input class="form-control" type="text" name="bik" maxlength="9" pattern="[0-9]{9}" placeholder="123 456 789">
                 </div>
-                <!-- *bank name* -->
+                <!-- *** bank name *** -->
                 <div class="input-group col-4">
                     <div class="input-group-prepend"><span class="input-group-text">Банк:</span></div>
                     <input class="form-control" type="text" name="bank" placeholder="ОАО РНКБ" disabled>
@@ -145,7 +146,7 @@
                 <!-- OKOGU - 7 -->
                 <div class="input-group col-3">
                     <div class="input-group-prepend"><span class="input-group-text">ОКОГУ:</span></div>
-                    <input class="form-control" type="text" name="okogu" maxlength="9" pattern="[0-9]{7}" placeholder="123 4567">
+                    <input class="form-control" type="text" name="okogu" maxlength="7" pattern="[0-9]{7}" placeholder="123 4567">
                 </div>
                 <!-- OKTMO - 11 -->
                 <div class="input-group col-3">
