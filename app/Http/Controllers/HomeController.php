@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CompanyRequest;
 use App\Models\companies;
+use App\Models\operations;
 
 class HomeController extends Controller
 {
@@ -86,12 +87,32 @@ class HomeController extends Controller
     // Operation 
     public function operation_get()
     {
-        return view('cab.mode_one');
+        //return view('cab.cabinet');
+        return view('cab.cabinet', ['data' => operations::all()]);
     }
 
     // Operations
     public function operation_post(Request $data)
     {
-        return view('cab.mode_one');
+        $operation = new operations();
+
+        $operation->type_id       = $data->input('type_id');
+        $operation->partner_id    = $data->input('partner_id');
+        $operation->target        = $data->input('target');
+        $operation->document      = $data->input('document');
+        $operation->verification  = $data->input('verification');
+        $operation->date          = $data->input('date');
+        $operation->number        = $data->input('number');
+        $operation->dating        = $data->input('dating');
+        $operation->sum           = $data->input('sum');
+        $operation->purpose       = $data->input('purpose');
+
+        $operation->user_id       = 1;
+        $operation->link          = 'link';
+
+        $operation->save();
+
+        return view('cab.cabinet', ['data' => operations::all()]);
+        //return redirect()->route('user_post');
     }
 }

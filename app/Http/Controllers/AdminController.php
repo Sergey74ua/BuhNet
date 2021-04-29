@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // Import models
 use App\Models\User;
 use App\Models\companies;
+use App\Models\operations;
 
 class AdminController extends Controller
 {
@@ -37,7 +38,7 @@ class AdminController extends Controller
 
         // Список операция
         if ($page == 'operations') {
-            return view('adm.panel', ['data' => ['добавить вывод списка операций по выбранной компании']]);
+            return view('adm.panel', ['data' => operations::all()]);
         }
     }
 

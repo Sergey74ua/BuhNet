@@ -5,6 +5,10 @@
         <a class="btn btn-primary" href="/company" role="button">Новая компания</a>
     </div>
 
+    <div class="toast-body">
+        <a class="btn btn-info" href="/operation" role="button">Операции</a>
+    </div>
+
     <!-- Nav tabs -->
     <ul class="nav nav-tabs"> <!-- nav-stacked -->
         <li class="nav-item">
