@@ -20,7 +20,7 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'user_get'])-
 Route::post('profile', [App\Http\Controllers\UserController::class, 'user_post'])->name('user_post');
 
 // Cabinet
-Route::get('cabinet', [App\Http\Controllers\HomeController::class, 'cabinet'])->name('user_post');
+Route::get('cabinet', [App\Http\Controllers\HomeController::class, 'company_get'])->name('cabinet');
 
 Route::get('company', [App\Http\Controllers\HomeController::class, 'company_get'])->name('company');
 Route::post('company', [App\Http\Controllers\HomeController::class, 'company_post'])->name('company_post');

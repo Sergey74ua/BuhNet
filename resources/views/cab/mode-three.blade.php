@@ -6,7 +6,7 @@
         <thead>
             <caption>Отчет сформирован в соответствии данными актуальными на 05.04.2021 г.</caption>
             <tr class="text-center">
-  
+                <th class="bn-num">id</th>
                 <th class="bn-num">type_id</th>
                 <th class="bn-num">partner_id</th>
                 <th class="bn-num">target</th>
@@ -25,7 +25,7 @@
         <tbody class="text-right">
             @foreach($data as $element)
                 <tr>
-
+                    <td>{{ $element->id }}</td>
                     <td>{{ $element->type_id }}</td>
                     <td>{{ $element->partner_id }}</td>
                     <td>{{ $element->target }}</td>
